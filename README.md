@@ -1,4 +1,4 @@
-# Official Implementation of SIGIR'26 short paper: RoTE
+# Official Implementation of SIGIR'26——RoTE
 
 Official SIGIR 2026 implementation of **RoTE: Coarse-to-Fine Multi-Level Rotary Time Embedding for Sequential Recommendation**.
 
