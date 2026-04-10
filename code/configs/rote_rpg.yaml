@@ -1,0 +1,60 @@
+backbone: rpg
+variant: rote
+use_rote: true
+model_name: RoTE-RPG
+
+dataset_name: AmazonReviews2014Time
+category: Toys_and_Games
+metadata: sentence
+split: leave_one_out
+
+seed: 2024
+device: cpu
+num_proc: 1
+train_batch_size: 256
+eval_batch_size: 32
+lr: 0.0003
+weight_decay: 0.0
+warmup_steps: 10000
+steps: ~
+epochs: 150
+max_grad_norm: 1.0
+eval_interval: 1
+patience: 20
+topk: [5, 10]
+metrics: [ndcg, recall]
+val_metric: ndcg@10
+
+sent_emb_model: sentence-transformers/sentence-t5-base
+sent_emb_dim: 768
+sent_emb_pca: 128
+sent_emb_batch_size: 512
+
+max_item_seq_len: 50
+n_embd: 448
+n_layer: 2
+n_head: 4
+n_inner: 1024
+activation_function: gelu_new
+resid_pdrop: 0.0
+embd_pdrop: 0.5
+attn_pdrop: 0.5
+layer_norm_epsilon: 1e-12
+initializer_range: 0.02
+
+n_codebook: 32
+codebook_size: 256
+opq_use_gpu: false
+opq_gpu_id: 0
+faiss_omp_num_threads: 32
+temperature: 0.07
+num_beams: 50
+n_edges: 50
+propagation_steps: 3
+chunk_size: 1024
+num_workers: 64
+
+rote_mode: ymd
+year_weight: 1.5
+month_weight: 1.0
+day_weight: 0.5

@@ -1,0 +1,24 @@
+backbone: sasrec
+variant: baseline
+use_rote: false
+model_name: SASRec
+
+dataset_name: Toys_and_Games_5_time
+data_path: data/Toys_and_Games_5_time.txt
+
+seed: 2024
+device: cpu
+batch_size: 512
+lr: 0.001
+maxlen: 50
+hidden_units: 64
+num_blocks: 2
+num_epochs: 1000
+num_heads: 1
+dropout_rate: 0.5
+l2_emb: 0.0
+norm_first: false
+eval_item_batch: 4096
+eval_interval: 20
+num_workers: 3
+topk: [5, 10]

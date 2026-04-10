@@ -1,0 +1,11 @@
+numpy>=1.24
+PyYAML>=6.0
+requests>=2.31
+tqdm>=4.66
+torch>=2.3
+transformers>=4.40
+accelerate>=0.30
+sentence-transformers>=3.0
+scikit-learn>=1.4
+faiss-cpu>=1.8
+tiktoken>=0.7
